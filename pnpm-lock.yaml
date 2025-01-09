@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      emotion:
+        specifier: ^11.0.0
+        version: 11.0.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -634,6 +637,9 @@ packages:
 
   electron-to-chromium@1.5.80:
     resolution: {integrity: sha512-LTrKpW0AqIuHwmlVNV+cjFYTnXtM9K37OGhpe0ZI10ScPSxqVSryZHIY3WnCS5NSYbBODRTZyhRMS2h5FAEqAw==}
+
+  emotion@11.0.0:
+    resolution: {integrity: sha512-QW3CRqic3aRw1OBOcnvxaHEpCmxtlGwZ5tM9dV5rY3Rn+F41E8EgTPOqJ5VfsqQ5ZXHDs2zSDyUwGI0ZfC2+5A==}
 
   esbuild@0.24.2:
     resolution: {integrity: sha512-+9egpBW8I3CD5XPe0n6BfT5fxLzxrlDzqydF3aviG+9ni1lDC/OvMHcxqEFV0+LANZG5R1bFMWfUrjVsdwxJvA==}
@@ -1614,6 +1620,8 @@ snapshots:
   deep-is@0.1.4: {}
 
   electron-to-chromium@1.5.80: {}
+
+  emotion@11.0.0: {}
 
   esbuild@0.24.2:
     optionalDependencies:
