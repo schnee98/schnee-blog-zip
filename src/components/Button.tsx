@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
+import IconPlusMono from '../asset/icon-plus-mono.svg?react';
+import IconXMono from '../asset/icon-x-mono.svg?react';
 import { theme } from '../constants/theme';
 
 interface Props extends ComponentProps<'button'> {
@@ -11,7 +13,8 @@ interface Props extends ComponentProps<'button'> {
 export function Button({ color, icon, text, children }: Props) {
   return (
     <_Button $color={color}>
-      {icon && <div>{icon}</div>}
+      {icon === 'plus' && <IconPlusMono />}
+      {icon === 'close' && <IconXMono />}
       {text && typeof children === 'string' && children}
     </_Button>
   );
@@ -19,6 +22,7 @@ export function Button({ color, icon, text, children }: Props) {
 
 const _Button = styled.button<{ $color: 'white' | 'gray' }>(({ $color }) => ({
   width: 'fit-content',
+  minWidth: 24,
   height: 24,
   padding: '0 6px',
   display: 'flex',
@@ -29,6 +33,7 @@ const _Button = styled.button<{ $color: 'white' | 'gray' }>(({ $color }) => ({
     $color === 'white' ? theme.color.grayScaleWhite : theme.color.grayScale50,
   border: theme.border.default,
   borderRadius: theme.radius.circle,
+  cursor: 'pointer',
   '&:hover': {
     border: theme.border.bold,
   },
