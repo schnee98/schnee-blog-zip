@@ -22,4 +22,15 @@ export const theme = {
     medium: 'var(--font-weight-medium)',
     bold: 'var(--font-weight-bold)',
   },
+  border: {
+    default: 'var(--border-default)',
+    bold: 'var(--border-bold)',
+  },
+  radius: {
+    default: 'var(--radius-default)',
+    circle: 'var(--radius-circle)',
+  },
+  shadow: {
+    drop: 'var(--drop-shadow)',
+  },
 } as const;
