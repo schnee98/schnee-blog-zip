@@ -20,6 +20,12 @@ export function Button({ color, icon, text, children }: Props) {
   );
 }
 
+function getBackgroundColor(color: 'white' | 'gray') {
+  return color === 'white'
+    ? theme.color.grayScaleWhite
+    : theme.color.grayScale50;
+}
+
 const _Button = styled.button<{ $color: 'white' | 'gray' }>(({ $color }) => ({
   width: 'fit-content',
   minWidth: 24,
@@ -28,11 +34,12 @@ const _Button = styled.button<{ $color: 'white' | 'gray' }>(({ $color }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: 2,
+
+  backgroundColor: getBackgroundColor($color),
   color: theme.color.grayScale200,
-  backgroundColor:
-    $color === 'white' ? theme.color.grayScaleWhite : theme.color.grayScale50,
   border: theme.border.default,
   borderRadius: theme.radius.circle,
+
   cursor: 'pointer',
   '&:hover': {
     border: theme.border.bold,
