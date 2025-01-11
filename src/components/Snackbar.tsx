@@ -1,7 +1,7 @@
-import { theme } from 'src/constants/theme';
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 import { centerOfViewport } from 'src/constants/style';
+import { theme } from 'src/constants/theme';
 
 interface Props extends ComponentProps<'div'> {
   name: string;
@@ -18,10 +18,10 @@ export function Snackbar(props: Props) {
 const Content = styled.div({
   ...centerOfViewport,
 
-  boxShadow: theme.shadow.drop,
   width: 'fit-content',
   padding: '16px 24px',
+  textAlign: 'center',
   backgroundColor: theme.color.blue500,
   color: theme.color.grayScaleWhite,
-  textAlign: 'center',
+  boxShadow: theme.shadow.drop,
 });
