@@ -1,8 +1,8 @@
+import IconPlusMono from 'src/asset/icon-plus-mono.svg';
+import IconXMono from 'src/asset/icon-x-mono.svg';
+import { theme } from 'src/constants/theme';
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
-import IconPlusMono from '../asset/icon-plus-mono.svg';
-import IconXMono from '../asset/icon-x-mono.svg';
-import { theme } from '../constants/theme';
 
 interface Props extends ComponentProps<'button'> {
   color: 'white' | 'gray';

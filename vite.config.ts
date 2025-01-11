@@ -9,4 +9,9 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
+  resolve: {
+    alias: {
+      src: '/src', // 'src'를 프로젝트의 'src/' 디렉터리로 매핑
+    },
+  },
 });
