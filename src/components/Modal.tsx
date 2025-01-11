@@ -40,7 +40,8 @@ const TextContent = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   padding: 24,
-  gap: 10,
+  gap: 4,
+  color: theme.color.grayScale400,
 });
 
 const ButtonWrapper = styled.div({
@@ -50,12 +51,18 @@ const ButtonWrapper = styled.div({
 });
 
 const ModalButton = styled.button({
+  fontSize: theme.fontSize.regular,
   outline: theme.border.default,
   border: 'none',
   cursor: 'pointer',
+  '&:hover': {
+    color: theme.color.grayScale400,
+    textDecoration: 'underline',
+  },
 });
 
 const Bold = styled.span({
+  color: theme.color.grayScaleBlack,
   fontSize: theme.fontSize.medium,
   fontWeight: 700,
 });
