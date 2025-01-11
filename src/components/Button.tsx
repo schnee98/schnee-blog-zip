@@ -10,9 +10,11 @@ interface Props extends ComponentProps<'button'> {
   text: boolean;
 }
 
-export function Button({ color, icon, text, children }: Props) {
+export function Button(props: Props) {
+  const { color, icon, text, children, ...buttonProps } = props;
+
   return (
-    <_Button $color={color}>
+    <_Button $color={color} {...buttonProps}>
       {icon === 'plus' && <IconPlusMono />}
       {icon === 'close' && <IconXMono />}
       {text && typeof children === 'string' && children}
