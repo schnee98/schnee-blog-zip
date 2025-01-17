@@ -9,9 +9,9 @@ interface Props extends ComponentProps<'div'> {
   onCancel?: () => void;
 }
 
-export function Modal({ name, onSubmit, onCancel }: Props) {
+export function Modal({ name, onSubmit, onCancel, ...props }: Props) {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <TextContent>
         <div>
           <Bold>{name}</Bold> 블로그를

@@ -1,8 +1,8 @@
+import styled from '@emotion/styled';
+import { ComponentProps } from 'react';
 import IconPlusMono from 'src/asset/icon-plus-mono.svg';
 import IconXMono from 'src/asset/icon-x-mono.svg';
 import { theme } from 'src/constants/theme';
-import styled from '@emotion/styled';
-import { ComponentProps } from 'react';
 
 interface Props extends ComponentProps<'button'> {
   color: 'white' | 'gray';
@@ -10,15 +10,15 @@ interface Props extends ComponentProps<'button'> {
   text: boolean;
 }
 
-export function Button(props: Props) {
+export function HoverButton(props: Props) {
   const { color, icon, text, children, ...buttonProps } = props;
 
   return (
-    <_Button $color={color} {...buttonProps}>
+    <Button $color={color} {...buttonProps}>
       {icon === 'plus' && <IconPlusMono />}
       {icon === 'close' && <IconXMono />}
       {text && typeof children === 'string' && children}
-    </_Button>
+    </Button>
   );
 }
 
@@ -28,7 +28,7 @@ function getBackgroundColor(color: 'white' | 'gray') {
     : theme.color.grayScale50;
 }
 
-const _Button = styled.button<{ $color: 'white' | 'gray' }>(({ $color }) => ({
+const Button = styled.button<{ $color: 'white' | 'gray' }>(({ $color }) => ({
   width: 'fit-content',
   minWidth: 24,
   height: 24,

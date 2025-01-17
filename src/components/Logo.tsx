@@ -8,12 +8,12 @@ function Logo(props: Props) {
 
   return (
     <div style={{ ...size }}>
-      <Profile src={src} />
+      <LogoImage src={src} />
     </div>
   );
 }
 
-const Profile = styled.img({
+const LogoImage = styled.img({
   width: '100%',
   borderRadius: 50,
   border: 'none',
