@@ -1,17 +1,13 @@
 import { ReactNode } from 'react';
 
-interface HeaderProps {
-  type: 'header';
+interface BaseProps {
+  type: 'header' | 'post';
   children?: ReactNode;
 }
 
-interface PostProps {
-  type?: 'post';
-  href: string;
-  children?: ReactNode;
-}
-
-type Props = HeaderProps | PostProps;
+type Props =
+  | (BaseProps & { type: 'header' })
+  | (BaseProps & { type: 'post'; href: string });
 
 function Title(props: Props) {
   const isHeader = props.type === 'header';
